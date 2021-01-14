@@ -6,16 +6,16 @@ This is my first attempt at creating a network automation demo for submission to
 The devices.csv file contains the CSR1000v Always-on DevNet sandbox as part of this demo.
 Sandbox URL: https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
 
-CSR1000V Host: ios-xe-mgmt.cisco.com
+**CSR1000V Host:** ios-xe-mgmt.cisco.com
 
-SSH Port: 8181
+**SSH Port:** 8181
 
-NETCONF Port: 10000
+**NETCONF Port:** 10000
 
-RESTCONF Ports: 9443 (HTTPS)
+**RESTCONF Ports:** 9443 (HTTPS)
 
-Credentials of this public available Sandbox to specify when prompted for it:
+**Credentials of this public available Sandbox to specify when prompted for it:**
 
-Username: developer
+**Username:** developer
 
-Password: C1sco12345
+**Password:** C1sco12345
