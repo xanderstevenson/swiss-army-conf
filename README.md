@@ -1,5 +1,5 @@
 # Network-Automation-Demo
-U+1F976	
+:floppy_disk:
 This is my first attempt at creating a network automation demo for submission to Cisco DevNet's Automation Exchange - https://developer.cisco.com/network-automation/
 
 ### **About the LAB to run the demo:**
