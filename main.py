@@ -55,6 +55,8 @@ while True:
     if choice == 2:
         interfaces(username, password)
 
+    if choice == 3:
+        break
 
 
 

@@ -32,6 +32,8 @@ def interfaces(username, password):
             item_num += 1
         # prompt user to select interface
         choice_interface = int(input("Please select an interface: "))
+        if choice_interface < 1 or choice_interface >= len(interface_list):
+             choice_interface = int(input("Please select an interface: "))
         os.system('clear')
         interface_config = device.send_command(f"show ip interface {interface_list[choice_interface - 1]}")
         print('________________________')
