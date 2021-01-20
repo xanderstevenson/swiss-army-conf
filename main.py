@@ -8,10 +8,12 @@ from interfaces import interfaces
 import os
 import datetime
 # prompt for authorization credentials
+os.system('clear')
 username = input("Username: ")
 password = getpass("Password: ")
-
+os.system('clear')
 #menu
+
 menu = PrettyTable(['OPTION', 'CONFIG'])
 menu.add_row(["1", "Running Config"])
 menu.add_row(["2", "Interfaces"])
@@ -33,6 +35,7 @@ def running_config(usename, password):
     print('--------------------------------------------------------')
     print('***************************************************************************')
     print()
+    # print this log to a text file and save locally
     runnin_config_file = open("runnin_config.txt", "a")
     now = datetime.datetime.now()
     runnin_config_file.write('\n' + '*********************************************************\n')
@@ -41,6 +44,7 @@ def running_config(usename, password):
     runnin_config_file.write('*********************************************************\n')
     runnin_config_file.write(run_config_output)
     runnin_config_file.close()
+    
     run_config_device.disconnect()
     
 

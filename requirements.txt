@@ -8,6 +8,7 @@ dnspython==2.1.0
 future==0.18.2
 Gelatin==2.2.10
 lxml==4.6.2
+ncclient==0.6.9
 netmiko==3.3.2
 ntc-templates==1.6.0
 paramiko==2.7.2
