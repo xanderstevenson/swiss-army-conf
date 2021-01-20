@@ -9,34 +9,33 @@ from main_menu import main_menu
 def interfaces(username, password):
     # username and password defined in main.py
     device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
-    output = device.send_command("show interfaces")
+    # output = device.send_command("show interfaces brief")
     ip_int_br_output = device.send_command("show ip interface brief")
+
     interface_list = []
-    output_list = output.split()
+    output_list = ip_int_br_output.split()
     # create a ist of interfaces
     for word in output_list:
-        if 'GigabitEthernet' in word:
+        if 'GigabitEthernet' in word or 'Loopback' in word:
             interface_list.append(word) 
     # print list of interfaces
     def print_interfaces():
-        print(ip_int_br_output)
-        print("\n\n\n")
+        # print(ip_int_br_output)
+        print() 
         print("INTERFACES")
-        print("----------") 
-        print()    
+        print("----------")    
         item_num = 1 
         for a_device in interface_list:
             print('________________________')
             print(item_num, "  " + a_device)
             print('************************')
-            print()
             item_num += 1
         # prompt user to select interface
         choice_interface = int(input("Please select an interface: "))
         os.system('clear')
-        interface_config = device.send_command(f"show ip interface GigabitEthernet {choice_interface}")
+        interface_config = device.send_command(f"show ip interface {interface_list[choice_interface - 1]}")
         print('________________________')
-        print(f"GigabitEthernet {choice_interface}")
+        print(f"{interface_list[choice_interface - 1]}")
         print('************************')
         print(interface_config)
         print()
