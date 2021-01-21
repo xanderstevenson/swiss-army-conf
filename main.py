@@ -5,6 +5,7 @@ import re
 from Gelatin.util import compile, generate
 from prettytable import PrettyTable
 from interfaces import interfaces
+from port_open_all import port_open_all
 import os
 import datetime
 # prompt for authorization credentials
@@ -15,9 +16,10 @@ os.system('clear')
 #menu
 while True:
     menu = PrettyTable(['OPTION', 'CONFIG'])
-    menu.add_row(["1", "Running Config"])
-    menu.add_row(["2", "Gigabit Ethernet Interfaces"])
-    menu.add_row(["3", ""])
+    menu.add_row(["1", "Running Config - View and Print Log"])
+    menu.add_row(["2", "Interfaces - View and Print Log"])
+    menu.add_row(["3", "Open All Interfaces"])    
+    menu.add_row(["4", "Exit"])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
@@ -56,6 +58,9 @@ while True:
         interfaces(username, password)
 
     if choice == 3:
+        port_open_all(username, password)
+    
+    if choice == 4:
         break
 
 

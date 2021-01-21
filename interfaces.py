@@ -2,8 +2,7 @@
 from netmiko import ConnectHandler
 from prettytable import PrettyTable
 import os
-from main_menu import main_menu
-
+import datetime
 
 # function for displaying interfaces
 def interfaces(username, password):
@@ -11,7 +10,14 @@ def interfaces(username, password):
     device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
     # output = device.send_command("show interfaces brief")
     ip_int_br_output = device.send_command("show ip interface brief")
-
+    interfaces_file = open("interfaces.txt", "a")
+    now = datetime.datetime.now()
+    interfaces_file.write('\n' + '*********************************************************\n')
+    timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))
+    interfaces_file.write(timestamp + '\n')
+    interfaces_file.write('*********************************************************\n')
+    interfaces_file.write(ip_int_br_output)
+    interfaces_file.close()
     interface_list = []
     output_list = ip_int_br_output.split()
     # create a ist of interfaces
@@ -20,25 +26,31 @@ def interfaces(username, password):
             interface_list.append(word) 
     # print list of interfaces
     def print_interfaces():
-        # print(ip_int_br_output)
+        print(ip_int_br_output)
         print() 
         print("INTERFACES")
         print("----------")    
         item_num = 1 
         for a_device in interface_list:
-            print('________________________')
+            print('___________________________')
             print(item_num, "  " + a_device)
-            print('************************')
+            print('***************************')
             item_num += 1
-        # prompt user to select interface
+        print()
+        print('***************************************************************************')
+        print('A COPY OF RESULTS FROM show ip interface brief HAS BEEN SAVED TO: interfaces.txt')
+        print('--------------------------------------------------------')
+        print('***************************************************************************')
+        print()
+                # prompt user to select interface
         choice_interface = int(input("Please select an interface: "))
         if choice_interface < 1 or choice_interface >= len(interface_list):
              choice_interface = int(input("Please select an interface: "))
         os.system('clear')
         interface_config = device.send_command(f"show ip interface {interface_list[choice_interface - 1]}")
-        print('________________________')
+        print('___________________________')
         print(f"{interface_list[choice_interface - 1]}")
-        print('************************')
+        print('***************************')
         print(interface_config)
         print()
         false_wait =input("Press ENTER to continue or 'menu' + ENTER for main menu: ")
