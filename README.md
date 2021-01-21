@@ -21,5 +21,19 @@ Sandbox URL: https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565
 
 **Password:** C1sco12345
 
+**Dependencies:** See requirements.txt 
+------------------------------------------
+
+***Walk***
+
+1. Create a virtual environment to conduct this lab in
+2. Clone my repository: 
+git clone https://github.com/xanderstevenson/network-automation-demo.git
+3. Install required dependencies:
+pip install -r requirements.txt
+4. Run the script
+python main.py
+5. You will be prompted to enter the credentials (username & password listed above)
+
 
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
