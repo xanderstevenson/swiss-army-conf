@@ -40,3 +40,11 @@ Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
 GigabitEthernet2       unassigned      YES NVRAM  up                    up      
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+*********************************************************
+20210121_21:41:51
+*********************************************************
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+VirtualPortGroup0      192.168.1.1     YES manual up                    up      
