@@ -48,3 +48,10 @@ GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
 GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
 VirtualPortGroup0      192.168.1.1     YES manual up                    up      
+*********************************************************
+20210125_10:24:18
+*********************************************************
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
