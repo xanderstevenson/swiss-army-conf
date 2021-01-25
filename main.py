@@ -24,8 +24,8 @@ while True:
     menu.add_row(["1", "Running Config - View and Print Log"])
     menu.add_row(["2", "Interfaces - View and Print Log(s)"])
     menu.add_row(["3", "Startup Config - View and Print Log"])    
-    menu.add_row(["4", "Exit"])
-    menu.add_row(["5", "Alllll"])
+    menu.add_row(["4", "Everything Configuration - View and Print Log"])
+    menu.add_row(["5", "Exit"])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
@@ -41,10 +41,10 @@ while True:
         startup_config(username, password)
     
     elif choice == 4:
-        break
+        netconf_everything_config(username, password)
     
     elif choice == 5:
-        netconf_everything_config(username, password)
+        break
     
     else:
         print("Please select an option from 1 to 4: ")
