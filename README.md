@@ -38,6 +38,10 @@ python main.py
 
 <img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/Menu.PNG">
 
-For the main 3 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
+For the main 4 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
+
+For options 1 - 3, I used the config_manager Use Case in DevNet Automation Exchange as a starting point (https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/)
+
+For option 4, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
 
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
