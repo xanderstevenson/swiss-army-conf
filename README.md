@@ -34,7 +34,7 @@ pip install -r requirements.txt
 4. Run the script
 python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
-6. Make a choice from the options in this menu:
+6. Make a choice from the options in this menu: <br>
 +--------+-------------------------------------+<br>
 | OPTION |                CONFIG               |<br>
 +--------+-------------------------------------+<br>
