@@ -35,14 +35,13 @@ pip install -r requirements.txt
 python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
 6. Make a choice from the options in this menu: <br>
-+--------+-------------------------------------+<br>
-| OPTION |                CONFIG               |<br>
-+--------+-------------------------------------+<br>
+
++----------------------------------------------+<br>
 |   1    | Running Config - View and Print Log |<br>
 |   2    |  Interfaces - View and Print Log(s) |<br>
 |   3    | Startup Config - View and Print Log |<br>
 |   4    |                 Exit                |<br>
-+--------+-------------------------------------+<br>
++----------------------------------------------+<br>
 
 For the main 3 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
 
