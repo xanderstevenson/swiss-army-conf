@@ -38,11 +38,11 @@ python main.py
 +--------+-------------------------------------+<br>
 | OPTION |                CONFIG               |<br>
 +--------+-------------------------------------+<br>
-|   1    | Running Config - View and Print Log |
-|   2    |  Interfaces - View and Print Log(s) |
-|   3    | Startup Config - View and Print Log |
-|   4    |                 Exit                |
-+--------+-------------------------------------+
+|   1    | Running Config - View and Print Log |<br>
+|   2    |  Interfaces - View and Print Log(s) |<br>
+|   3    | Startup Config - View and Print Log |<br>
+|   4    |                 Exit                |<br>
++--------+-------------------------------------+<br>
 
 For the main 3 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
 
