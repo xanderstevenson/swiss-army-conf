@@ -36,6 +36,7 @@ python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
 6. Make a choice from the options in this menu: <br>
 
+<img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/Menu.PNG">
 +----------------------------------------------+<br>
 |   1    | Running Config - View and Print Log |<br>
 |   2    |  Interfaces - View and Print Log(s) |<br>
