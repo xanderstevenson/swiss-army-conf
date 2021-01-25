@@ -26,14 +26,24 @@ Sandbox URL: https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565
 
 ***Walk***
 
-1. Create a virtual environment to conduct this lab in
-2. Clone my repository: 
+1. Create and activate a virtual environment to conduct this lab in
+2. Fork and clone the GitHub repository: 
 git clone https://github.com/xanderstevenson/network-automation-demo.git
 3. Install required dependencies:
 pip install -r requirements.txt
 4. Run the script
 python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
+6. Make a choice from the options in this menu:
++--------+-------------------------------------+
+| OPTION |                CONFIG               |
++--------+-------------------------------------+
+|   1    | Running Config - View and Print Log |
+|   2    |  Interfaces - View and Print Log(s) |
+|   3    | Startup Config - View and Print Log |
+|   4    |                 Exit                |
++--------+-------------------------------------+
 
+For the main 3 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
 
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
