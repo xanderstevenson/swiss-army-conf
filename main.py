@@ -6,6 +6,7 @@ from prettytable import PrettyTable
 from interfaces import interfaces
 from startup_config import startup_config
 from runnin_config import runnin_config
+from netconf_everything_config import netconf_everything_config
 import os
 import datetime
 # prompt for authorization credentials
@@ -24,6 +25,7 @@ while True:
     menu.add_row(["2", "Interfaces - View and Print Log(s)"])
     menu.add_row(["3", "Startup Config - View and Print Log"])    
     menu.add_row(["4", "Exit"])
+    menu.add_row(["5", "Alllll"])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
@@ -40,6 +42,9 @@ while True:
     
     elif choice == 4:
         break
+    
+    elif choice == 5:
+        netconf_everything_config(username, password)
     
     else:
         print("Please select an option from 1 to 4: ")
