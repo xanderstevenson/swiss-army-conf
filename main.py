@@ -20,12 +20,23 @@ os.system('clear')
 
 while True:
 
-    menu = PrettyTable(['OPTION', 'CONFIG'])
-    menu.add_row(["1", "Running Config - View and Print Log"])
-    menu.add_row(["2", "Interfaces - View and Print Log(s)"])
-    menu.add_row(["3", "Startup Config - View and Print Log"])    
-    menu.add_row(["4", "Everything Configuration - View and Print Log"])
-    menu.add_row(["5", "Exit"])
+    print("""
+ _____          _            ___                         _____              __  
+/  ___|        (_)          / _ \                       /  __ \            / _| 
+\ `--.__      ___ ___ ___  / /_\ \_ __ _ __ ___  _   _  | /  \/ ___  _ __ | |_  
+`--. \ \ /\ / / / __/ __| |  _  | '__| '_ ` _ \| | | | | |    / _ \| '_ \|  _| 
+/\__/ /\ V  V /| \__ \__ \ | | | | |  | | | | | | |_| | | \__/\ (_) | | | | |   
+\____/  \_/\_/ |_|___/___/ \_| |_/_|  |_| |_| |_|\__, |  \____/\___/|_| |_|_|   
+                                                 __/ |                         
+                                                |___/                          
+            """)
+
+    menu = PrettyTable(['OPTION', 'CONFIG', 'PROTOCOL'])
+    menu.add_row(["1", "Running Config - View and Print Log", "SSH"])
+    menu.add_row(["2", "Interfaces - View and Print Log(s)", "SSH"])
+    menu.add_row(["3", "Startup Config - View and Print Log", "SSH"])    
+    menu.add_row(["4", "Everything Configuration - XML - View and Print Log", "NETCONF"])
+    menu.add_row(["5", "Exit", ""])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
