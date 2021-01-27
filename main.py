@@ -19,7 +19,7 @@ os.system('clear')
 
 
 while True:
-
+    os.system('clear')
     print("""
  _____          _            ___                         _____              __  
 /  ___|        (_)          / _ \                       /  __ \            / _| 
@@ -35,7 +35,9 @@ while True:
     menu.add_row(["1", "Running Config - View and Print Log", "SSH"])
     menu.add_row(["2", "Interfaces - View and Print Log(s)", "SSH"])
     menu.add_row(["3", "Startup Config - View and Print Log", "SSH"])    
+    menu.add_row(["-------", "---------------------------------------------------", "---------"])  
     menu.add_row(["4", "Everything Configuration - XML - View and Print Log", "NETCONF"])
+    menu.add_row(["-------", "---------------------------------------------------", "---------"])
     menu.add_row(["5", "Exit", ""])
     print(menu)
     choice = int(input("Please select an option: "))

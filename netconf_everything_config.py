@@ -13,15 +13,27 @@ def netconf_everything_config(username, password):
                         </native>
                     </filter>
                     '''
-    # Pretty print the XML reply
+    # Pretty print the XML reply to netconf_everything_config.txt
     xmlDom = xml.dom.minidom.parseString( str( device.get_config('running', hostname_filter)))
     netconf_cofig_file = open("netconf_everything_config.txt", "a")
+    # get the date
     now = datetime.datetime.now()
-    netconf_cofig_file.write('\n' + '*********************************************************\n')
+    netconf_cofig_file.write('\n' + '---------------------------')
+    netconf_cofig_file.write('\n' + 'RUNNIG CONFIG VIA NETCONF')
     timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))
-    netconf_cofig_file.write(timestamp + '\n')
-    netconf_cofig_file.write('*********************************************************\n')
+    netconf_cofig_file.write('\n' + timestamp)
+    netconf_cofig_file.write('\n' + '---------------------------' + '\n') 
     netconf_cofig_file.write(xmlDom.toprettyxml( indent = "  " ))
     netconf_cofig_file.close()
     
+    # Printing the pretty XML to the temrinal
+    print('\n' + '---------------------------') 
+    print('RUNNIG CONFIG VIA NETCONF')
+    print('---------------------------') 
+    timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))
+    print(timestamp)
+    print('---------------------------') 
     print(xmlDom.toprettyxml( indent = "  " ))
+    
+    # freezes the view and prompts the user before continuing
+    throwaway_input = input('Press Any Key to Continue')
