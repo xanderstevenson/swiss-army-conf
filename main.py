@@ -6,7 +6,9 @@ from prettytable import PrettyTable
 from interfaces import interfaces
 from startup_config import startup_config
 from runnin_config import runnin_config
-from netconf_everything_config import netconf_everything_config
+from restconf_config import restconf_config
+from netconf_running_config import netconf_running_config
+
 import os
 import datetime
 # prompt for authorization credentials
@@ -23,8 +25,8 @@ while True:
     print("""
  _____          _            ___                         _____              __  
 /  ___|        (_)          / _ \                       /  __ \            / _| 
-\ `--.__      ___ ___ ___  / /_\ \_ __ _ __ ___  _   _  | /  \/ ___  _ __ | |_  
-`--. \ \ /\ / / / __/ __| |  _  | '__| '_ ` _ \| | | | | |    / _ \| '_ \|  _| 
+\ `-- __      ___ ___ ___  / /_\ \_ __ _ __ ___  _   _  | /  \/ ___  _ __ | |_  
+ `--. \ \ /\ / / / __/ __| |  _  | '__| '_ ` _ \| | | | | |    / _ \| '_ \|  _| 
 /\__/ /\ V  V /| \__ \__ \ | | | | |  | | | | | | |_| | | \__/\ (_) | | | | |   
 \____/  \_/\_/ |_|___/___/ \_| |_/_|  |_| |_| |_|\__, |  \____/\___/|_| |_|_|   
                                                  __/ |                         
@@ -36,7 +38,7 @@ while True:
     menu.add_row(["2", "Interfaces - View and Print Log(s)", "SSH"])
     menu.add_row(["3", "Startup Config - View and Print Log", "SSH"])    
     menu.add_row(["-------", "---------------------------------------------------", "---------"])  
-    menu.add_row(["4", "Everything Configuration - XML - View and Print Log", "NETCONF"])
+    menu.add_row(["4", "Running Config - XML - View and Print Log", "NETCONF"])
     menu.add_row(["-------", "---------------------------------------------------", "---------"])
     menu.add_row(["5", "Exit", ""])
     print(menu)
@@ -54,11 +56,14 @@ while True:
         startup_config(username, password)
     
     elif choice == 4:
-        netconf_everything_config(username, password)
+        netconf_running_config(username, password)
     
     elif choice == 5:
         break
     
+    elif choice == 6:
+        restconf_config(username, password)
+
     else:
         print("Please select an option from 1 to 4: ")
         

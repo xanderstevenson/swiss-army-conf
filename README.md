@@ -46,4 +46,6 @@ For options 1 - 3, I used the config_manager Use Case in DevNet Automation Excha
 
 For option 4, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
 
+For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
+
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
