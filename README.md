@@ -36,12 +36,16 @@ python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
 6. Make a choice from the options in this menu: <br>
 
-<img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/Menu.PNG">
+<img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/Net-Menu.PNG">
 
 For the main 4 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
+
+Acknowledgements:
 
 For options 1 - 3, I used the config_manager Use Case in DevNet Automation Exchange as a starting point (https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/)
 
 For option 4, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
+
+For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
 
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
