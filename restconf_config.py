@@ -12,13 +12,13 @@ def restconf_config(username, password):
         print(json.dumps(json.loads(bytes), indent=2))
    
    
-    restconf_base_url = 'https://ios-xe-mgmt.cisco.com:9443/restconf/data'
+    restconf_base_url = 'https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native'
     headers ={
         "Content-Type": "application/yang-data+json",
-        "Accept": "application/yang-data+json"
+        "Accept": "application/yang-data+json",
             }
-
-    response = requests.get(url=f"{restconf_base_url}", headers = headers, auth=(username, password), verify= False)
+    url=restconf_base_url
+    response = requests.request("GET", url, headers=headers, auth=(username, password), verify= False)
     
     # response = requests.get(
     # url = 'https://ios-xe-mgmt.cisco.com',
@@ -29,5 +29,7 @@ def restconf_config(username, password):
     # verify = False)
 
     # Pretty print our JSON response
-    print(response)
+    print(response.text)
 
+    # freezes the view and prompts the user before continuing
+    throwaway_input = input('Press Any Key to Continue')

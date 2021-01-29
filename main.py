@@ -34,34 +34,42 @@ while True:
             """)
 
     menu = PrettyTable(['OPTION', 'CONFIG', 'PROTOCOL'])
-    menu.add_row(["1", "Running Config - View and Print Log", "SSH"])
-    menu.add_row(["2", "Interfaces - View and Print Log(s)", "SSH"])
-    menu.add_row(["3", "Startup Config - View and Print Log", "SSH"])    
-    menu.add_row(["-------", "---------------------------------------------------", "---------"])  
-    menu.add_row(["4", "Running Config - XML - View and Print Log", "NETCONF"])
+    menu.add_row(["1", "Running Config - XML - View and Print Log", "NETCONF"])
     menu.add_row(["-------", "---------------------------------------------------", "---------"])
-    menu.add_row(["5", "Exit", ""])
+    menu.add_row(["2", "Running Config - XML - View and Print Log", "RESTCONF"]) 
+    menu.add_row(["-------", "---------------------------------------------------", "---------"])
+    menu.add_row(["3", "Running Config - View and Print Log", "SSH"])
+    menu.add_row(["4", "Interfaces - View and Print Log(s)", "SSH"])
+    menu.add_row(["5", "Startup Config - View and Print Log", "SSH"])    
+    menu.add_row(["-------", "---------------------------------------------------", "---------"]) 
+    menu.add_row(["6", "Exit", ""])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
     # device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
 
+
     if choice == 1:
-        runnin_config(username, password)
-
-    elif choice == 2:
-        interfaces(username, password)
-
-    elif choice == 3:
-        startup_config(username, password)
-    
-    elif choice == 4:
         netconf_running_config(username, password)
     
+    elif choice == 2:
+        restconf_config(username, password)
+        
+    elif choice == 3:
+        runnin_config(username, password)
+
+    elif choice == 4:
+        interfaces(username, password)
+
     elif choice == 5:
-        break
+        startup_config(username, password)
+    
+
     
     elif choice == 6:
+        break
+    
+    elif choice == 2:
         restconf_config(username, password)
 
     else:
