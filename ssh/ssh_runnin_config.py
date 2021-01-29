@@ -1,18 +1,18 @@
 import datetime
 from netmiko import ConnectHandler
 # Function to run if user selects #1 from main menu
-def runnin_config(username, password):
+def ssh_runnin_config(username, password):
     run_config_device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
     run_config_output = run_config_device.send_command("show running-config")
     print(run_config_output)
     print()
     print('***************************************************************************')
-    print('A COPY OF THIS RUNNING CONFIGURATION HAS BEEN LOGGED TO: runnin_config.txt')
+    print('A COPY OF THIS RUNNING CONFIGURATION HAS BEEN LOGGED TO: ssh_runnin_config.txt')
     print('--------------------------------------------------------')
     print('***************************************************************************')
     print()
     # print this log to a text file and save locally
-    runnin_config_file = open("runnin_config.txt", "a")
+    runnin_config_file = open("logs/ssh_runnin_config.txt", "a")
     now = datetime.datetime.now()
     runnin_config_file.write('\n' + '*********************************************************\n')
     timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))

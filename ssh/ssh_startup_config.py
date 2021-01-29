@@ -6,7 +6,7 @@ from prettytable import PrettyTable
 import os
 import datetime  
     
-def startup_config(username, password):
+def ssh_startup_config(username, password):
     start_config_device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
     start_config_output = start_config_device.send_command("show startup-config")
     print(start_config_output)
@@ -17,7 +17,7 @@ def startup_config(username, password):
     print('***************************************************************************')
     print()
     # print this log to a text file and save locally
-    start_config_file = open("startup_config.txt", "a")
+    start_config_file = open("logs/ssh_startup_config.txt", "a")
     now = datetime.datetime.now()
     start_config_file.write('\n' + '*********************************************************\n')
     timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))

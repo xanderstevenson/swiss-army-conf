@@ -16,7 +16,7 @@ def netconf_running_config(username, password):
                     '''
     # Pretty print the XML reply to netconf_everything_config.txt
     xmlDom = xml.dom.minidom.parseString( str( device.get_config('running', hostname_filter)))
-    netconf_cofig_file = open("netconf_everything_config.txt", "a")
+    netconf_cofig_file = open("logs/netconf_running_config.txt", "a")
     # get the date
     now = datetime.datetime.now()
     netconf_cofig_file.write('\n' + '---------------------------')
