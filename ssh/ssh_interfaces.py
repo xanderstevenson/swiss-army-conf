@@ -5,12 +5,12 @@ import os
 import datetime
 
 # function for displaying interfaces
-def interfaces(username, password):
+def ssh_interfaces(username, password):
     # username and password defined in main.py
     device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
     # output = device.send_command("show interfaces brief")
     ip_int_br_output = device.send_command("show ip interface brief")
-    interfaces_file = open("interfaces.txt", "a")
+    interfaces_file = open("logs/ssh_interfaces.txt", "a")
     now = datetime.datetime.now()
     interfaces_file.write('\n' + '*********************************************************\n')
     timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))

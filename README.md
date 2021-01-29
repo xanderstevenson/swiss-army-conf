@@ -48,4 +48,8 @@ For option 4, I used the NC-get-config repo in GitHub by Joe Clarke as a templat
 
 For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
 
+and 
+
+https://github.com/CiscoDevNet/python_code_samples_network/blob/master/RC-get-config/RC-get-config.py
+
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:

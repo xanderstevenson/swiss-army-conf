@@ -1,25 +1,25 @@
 
+# import stsndard and non-standard libraries
 from netmiko import ConnectHandler
 from getpass import getpass
-import re
 from prettytable import PrettyTable
-from interfaces import interfaces
-from startup_config import startup_config
-from runnin_config import runnin_config
-from restconf_config import restconf_config
-from netconf_running_config import netconf_running_config
-
 import os
-import datetime
+
+# import other modules
+from ssh.ssh_interfaces import ssh_interfaces
+from ssh.ssh_startup_config import ssh_startup_config
+from ssh.ssh_runnin_config import ssh_runnin_config
+from restconf.restconf_config import restconf_config
+from netconf.netconf_running_config import netconf_running_config
+
+
 # prompt for authorization credentials
 os.system('clear')
 username = input("Username: ")
 password = getpass("Password: ")
 os.system('clear')
-#menu
 
-
-
+# main loop with logo and menu
 while True:
     os.system('clear')
     print("""
@@ -33,21 +33,19 @@ while True:
                                                 |___/                          
             """)
 
-    menu = PrettyTable(['OPTION', 'CONFIG', 'PROTOCOL'])
-    menu.add_row(["1", "Running Config - XML - View and Print Log", "NETCONF"])
-    menu.add_row(["-------", "---------------------------------------------------", "---------"])
-    menu.add_row(["2", "Running Config - XML - View and Print Log", "RESTCONF"]) 
-    menu.add_row(["-------", "---------------------------------------------------", "---------"])
-    menu.add_row(["3", "Running Config - View and Print Log", "SSH"])
-    menu.add_row(["4", "Interfaces - View and Print Log(s)", "SSH"])
-    menu.add_row(["5", "Startup Config - View and Print Log", "SSH"])    
-    menu.add_row(["-------", "---------------------------------------------------", "---------"]) 
-    menu.add_row(["6", "Exit", ""])
+    menu = PrettyTable(['OPTION', 'CONFIGURATION', 'PROTOCOL', 'OUTPUT'])
+    menu.add_row(["1", "Running", "NETCONF", "XML"])
+    menu.add_row(["-------", "----------------", "---------", "--------"])
+    menu.add_row(["2", "Running", "RESTCONF", "JSON"]) 
+    menu.add_row(["-------", "----------------", "---------", "--------"])
+    menu.add_row(["3", "Running", "SSH", "Text"])
+    menu.add_row(["4", "Interfaces", "SSH", "Text"])
+    menu.add_row(["5", "Startup", "SSH", "Text"])    
+    menu.add_row(["-------", "----------------", "---------", "--------"]) 
+    menu.add_row(["6", "Exit", "", ""])
     print(menu)
     choice = int(input("Please select an option: "))
     os.system('clear')
-    # device = ConnectHandler(device_type='cisco_ios', host='ios-xe-mgmt.cisco.com', port=8181, username=username, password=password)
-
 
     if choice == 1:
         netconf_running_config(username, password)
@@ -56,22 +54,17 @@ while True:
         restconf_config(username, password)
         
     elif choice == 3:
-        runnin_config(username, password)
+        ssh_runnin_config(username, password)
 
     elif choice == 4:
-        interfaces(username, password)
+        ssh_interfaces(username, password)
 
     elif choice == 5:
-        startup_config(username, password)
-    
-
+        ssh_startup_config(username, password)
     
     elif choice == 6:
         break
     
-    elif choice == 2:
-        restconf_config(username, password)
-
     else:
         print("Please select an option from 1 to 4: ")
         
