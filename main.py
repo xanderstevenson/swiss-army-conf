@@ -32,7 +32,6 @@ while True:
                                                  __/ |                         
                                                 |___/                          
             """)
-
     menu = PrettyTable(['OPTION', 'CONFIGURATION', 'PROTOCOL', 'OUTPUT'])
     menu.add_row(["1", "Running", "NETCONF", "XML"])
     menu.add_row(["-------", "----------------", "---------", "--------"])

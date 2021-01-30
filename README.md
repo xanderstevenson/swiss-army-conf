@@ -36,7 +36,7 @@ python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
 6. Make a choice from the options in this menu: <br>
 
-<img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/Net-Menu.PNG">
+<img src="https://github.com/xanderstevenson/network-automation-demo/blob/main/swiss-army-conf-menu.PNG">
 
 For the main 4 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
 
