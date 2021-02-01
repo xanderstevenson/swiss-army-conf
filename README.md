@@ -5,7 +5,7 @@ This is my first attempt at creating a network automation demo for submission to
 ### **About the LAB to run the demo:**
 We will be interacting with an Always-On Sandbox instance of a Cisco Cloud Services Router - CSR1000v
 
-Sandbox URL: https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
+**Sandbox URL:** https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
 
 **CSR1000V Host:** ios-xe-mgmt.cisco.com
 
@@ -38,7 +38,10 @@ python main.py
 
 <img src="https://github.com/xanderstevenson/swiss-army-conf/blob/main/swiss-army-conf-menu.PNG">
 
-For the main 4 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
+For the main 5 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
+
+**Related Sandbox:** [IOS XE on CSR Recommended Code Always On Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology)
+
 
 **Acknowledgements**:
 ------------------------------------------
