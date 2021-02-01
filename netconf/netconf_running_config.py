@@ -38,3 +38,4 @@ def netconf_running_config(username, password):
     
     # freezes the view and prompts the user before continuing
     throwaway_input = input('Press Any Key to Continue')
+    

@@ -21,4 +21,6 @@ def ssh_runnin_config(username, password):
     runnin_config_file.write(run_config_output)
     runnin_config_file.close()
     
+    false_wait =input("Press any key to continue: ")
+    
     run_config_device.disconnect()

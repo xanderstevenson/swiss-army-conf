@@ -38,7 +38,7 @@ def ssh_interfaces(username, password):
             item_num += 1
         print()
         print('***************************************************************************')
-        print('A COPY OF RESULTS FROM show ip interface brief HAS BEEN SAVED TO: interfaces.txt')
+        print('A COPY OF RESULTS FROM show ip interface brief HAS BEEN SAVED TO: ssh_interfaces.txt')
         print('--------------------------------------------------------')
         print('***************************************************************************')
         print()
@@ -60,6 +60,6 @@ def ssh_interfaces(username, password):
         print_interfaces()
     print_interfaces()
     # main_menu()
-    # device.disconnect()
+    device.disconnect()
     
     
