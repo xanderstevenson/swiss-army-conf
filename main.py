@@ -66,5 +66,4 @@ while True:
     
     else:
         print("Please select an option from 1 to 4: ")
-        
 
