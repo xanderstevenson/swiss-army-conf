@@ -49,19 +49,17 @@ For the main 5 choices, a copy of the relevant log will be automatically copied 
 **Acknowledgements**:
 ------------------------------------------
 
-- For SSH, I used the config_manager Use Case in DevNet Automation Exchange as a starting point (https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/)
+- For SSH, I used the [config_manager Use Case](https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/) in DevNet Automation Exchange by Cisco engineer Alex Manuelian, as a starting point. 
 
-- For NETCONF, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
+- For NETCONF, I used the [NC-get-config repo in GitHub](https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config), by Joe Clarke, as a reference.
 
-- For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
+- For the RESTCONF, I based my some of my module on an artile on UltraConfig.com.au by Matt Albrecht titled [RESTCONF Tutorial - Everything you need to know about RESTCONF in 2020](https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/)
 
-and 
+                            and 
 
-https://github.com/CiscoDevNet/python_code_samples_network/blob/master/RC-get-config/RC-get-config.py
+[RC-get-config.py](https://github.com/CiscoDevNet/python_code_samples_network/blob/master/RC-get-config/RC-get-config.py), also from Joe Clarke.
 
-- And a major thank you to Tony Roman at DevNet, whose 'Model Driven Network
-Automation with IOS-XE LTRCRT-2700' saved me. I based a lot of my request calls on the paramenters and other nuances of using RESTCONF, NETCONF and SSH for network automation a a DevNEt Sandbox router:
-
-https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/5eU6DfQV/LTRCRT-2700-LG.pdf
+- I owe a major thank you to Tony Roman at DevNet, whose [Model Driven Network
+Automation with IOS-XE LTRCRT-2700](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/5eU6DfQV/LTRCRT-2700-LG.pdf) from Cisco Live 2019 saved me. I based a lot of my request calls on the paramenters and other nuances of using RESTCONF, NETCONF and SSH for network automation a a DevNEt Sandbox router:
 
 If you read this entire README.md, then congratulations! Have a cookie: :cookie:
