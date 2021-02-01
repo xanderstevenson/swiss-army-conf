@@ -12,7 +12,7 @@ def ssh_startup_config(username, password):
     print(start_config_output)
     print()
     print('***************************************************************************')
-    print('A COPY OF THIS STARTUP CONFIGURATION HAS BEEN LOGGED TO: startup_config.txt')
+    print('A COPY OF THIS STARTUP CONFIGURATION HAS BEEN LOGGED TO: ssh_startup_config.txt')
     print('--------------------------------------------------------')
     print('***************************************************************************')
     print()
@@ -25,5 +25,7 @@ def ssh_startup_config(username, password):
     start_config_file.write('*********************************************************\n')
     start_config_file.write(start_config_output)
     start_config_file.close()
+    
+    false_wait =input("Press any key to continue: ")
     
     start_config_device.disconnect()
