@@ -1,6 +1,7 @@
-# Network-Automation-Demo
+# Swiss-Army-Conf
+
 :floppy_disk:
-This is my first attempt at creating a network automation demo for submission to Cisco DevNet's Automation Exchange - https://developer.cisco.com/network-automation/
+This is my first attempt at creating a network automation demo for submission to [Cisco DevNet's Automation Exchange](https://developer.cisco.com/network-automation/)
 
 ### **About the LAB to run the demo:**
 We will be interacting with an Always-On Sandbox instance of a Cisco Cloud Services Router - CSR1000v
@@ -22,9 +23,10 @@ We will be interacting with an Always-On Sandbox instance of a Cisco Cloud Servi
 **Password:** C1sco12345
 
 **Dependencies:** See requirements.txt 
+
 ------------------------------------------
 
-***Walk***
+## Walk
 
 1. Create and activate a virtual environment to conduct this lab in
 2. Fork and clone the GitHub repository: 
@@ -40,23 +42,24 @@ python main.py
 
 For the main 5 choices, a copy of the relevant log will be automatically copied as backup to a text file in your local repo.
 
-**Related Sandbox:** [IOS XE on CSR Recommended Code Always On Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology)
+## Related Sandbox: 
+[IOS XE on CSR Recommended Code Always On Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology)
 
 
 **Acknowledgements**:
 ------------------------------------------
 
-For options SSH, I used the config_manager Use Case in DevNet Automation Exchange as a starting point (https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/)
+- For SSH, I used the config_manager Use Case in DevNet Automation Exchange as a starting point (https://developer.cisco.com/network-automation/detail/fba0ebc1-40c1-11eb-915c-36b321b824da/)
 
-For NETCONF, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
+- For NETCONF, I used the NC-get-config repo in GitHub by Joe Clarke as a template (https://github.com/CiscoDevNet/python_code_samples_network/tree/master/NC-get-config)
 
-For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
+- For the RESTCONF, I based my module on https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/
 
 and 
 
 https://github.com/CiscoDevNet/python_code_samples_network/blob/master/RC-get-config/RC-get-config.py
 
-And a major thank you to Tony Roman at DevNet, whose 'Model Driven Network
+- And a major thank you to Tony Roman at DevNet, whose 'Model Driven Network
 Automation with IOS-XE LTRCRT-2700' saved me. I based a lot of my request calls on the paramenters and other nuances of using RESTCONF, NETCONF and SSH for network automation a a DevNEt Sandbox router:
 
 https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/5eU6DfQV/LTRCRT-2700-LG.pdf
