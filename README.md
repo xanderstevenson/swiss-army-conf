@@ -2,6 +2,8 @@
 :floppy_disk:
 This is my first attempt at creating a network automation demo for submission to [Cisco DevNet's Automation Exchange](https://developer.cisco.com/network-automation/)
 
+<img src="https://github.com/xanderstevenson/swiss-army-conf/blob/main/what-why.PNG">
+
 ### **About the LAB to run the demo:**
 We will be interacting with an Always-On Sandbox instance of a Cisco Cloud Services Router - CSR1000v
 
@@ -34,7 +36,7 @@ git clone https://github.com/xanderstevenson/network-automation-demo.git
 - cd network-automation-demo
 - pip install -r requirements.txt
 4. Run the script
-python main.py
+- python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
 6. Make a choice from the options in this menu: <br>
 
