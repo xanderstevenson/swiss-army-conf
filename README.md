@@ -1,5 +1,5 @@
 # Swiss-Army-Conf
-:floppy_disk:
+
 This is my first attempt at creating a network automation submission for [Cisco DevNet's Automation Exchange](https://developer.cisco.com/network-automation/)
 
 <img src="https://github.com/xanderstevenson/swiss-army-conf/blob/main/what-why.PNG">
@@ -60,6 +60,4 @@ https://github.com/xanderstevenson/swiss-army-conf/blob/main/README.md
 - For the RESTCONF, I based my some of my module on an artile on UltraConfig.com.au by Matt Albrecht titled [RESTCONF Tutorial - Everything you need to know about RESTCONF in 2020](https://ultraconfig.com.au/blog/restconf-tutorial-everything-you-need-to-know-about-restconf-in-2020/). I also referenced [RC-get-config.py](https://github.com/CiscoDevNet/python_code_samples_network/blob/master/RC-get-config/RC-get-config.py), by Joe Clarke, which is found in the CiscoDevNet python_code_samples_network.
 
 - I owe a major thank you to Tony Roman at DevNet, whose [Model Driven Network
-Automation with IOS-XE LTRCRT-2700](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/5eU6DfQV/LTRCRT-2700-LG.pdf) from Cisco Live 2019 saved me. I based a lot of my request calls on the paramenters and other nuances of using RESTCONF, NETCONF and SSH for network automation a a DevNEt Sandbox router:
-
-If you read this entire README.md, then congratulations! Have a cookie: :cookie:
+Automation with IOS-XE LTRCRT-2700](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/5eU6DfQV/LTRCRT-2700-LG.pdf) from Cisco Live 2019 saved me. I based a lot of my request calls on the paramenters and other nuances of using RESTCONF, NETCONF and SSH for network automation on a DevNEt Sandbox router.
