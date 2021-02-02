@@ -1,6 +1,6 @@
 # Swiss-Army-Conf
 
-This is my first attempt at creating a network automation submission for [Cisco DevNet's Automation Exchange](https://developer.cisco.com/network-automation/)
+I humbly present to you, my first submission to [Cisco DevNet's Automation Exchange](https://developer.cisco.com/network-automation/). Written in Python, this tool offers those monitoring a network device with 3 avenues for viewing device configuration: NETCONF, RESTCONF and SSH. The results are automatically logged in XML, JSON and text formats, respectively. 
 
 <img src="https://github.com/xanderstevenson/swiss-army-conf/blob/main/what-why.PNG">
 
