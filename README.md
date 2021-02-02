@@ -31,7 +31,8 @@ We will be interacting with an Always-On Sandbox instance of a Cisco Cloud Servi
 2. Fork and clone the GitHub repository: 
 git clone https://github.com/xanderstevenson/network-automation-demo.git
 3. Install required dependencies:
-pip install -r requirements.txt
+- cd network-automation-demo
+- pip install -r requirements.txt
 4. Run the script
 python main.py
 5. You will be prompted to enter the credentials (username & password listed above)
